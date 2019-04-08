@@ -1,0 +1,3 @@
+/Users/igrik/Documents/C_Programm_sourse_code/Structures/Single Linked List/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/igrik/Documents/C_Programm_sourse_code/Structures/Single Linked List/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/igrik/Documents/C_Programm_sourse_code/Structures/Single Linked List/cmake-build-debug/CMakeFiles/Single_Linked_List.h.dir

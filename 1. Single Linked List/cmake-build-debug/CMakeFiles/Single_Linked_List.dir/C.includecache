@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/igrik/Documents/C_Programm_sourse_code/Structures/Single Linked List/Example.c
+stdio.h
+-
+Single_Linked_List.h
+/Users/igrik/Documents/C_Programm_sourse_code/Structures/Single Linked List/Single_Linked_List.h
+
+/Users/igrik/Documents/C_Programm_sourse_code/Structures/Single Linked List/Single_Linked_List.h
+
