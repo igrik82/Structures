@@ -1,0 +1,6 @@
+#ifndef SINGLE_LINKED_LIST_LIBRARY_H
+#define SINGLE_LINKED_LIST_LIBRARY_H
+
+void hello(void);
+
+#endif //SINGLE_LINKED_LIST_LIBRARY_H
