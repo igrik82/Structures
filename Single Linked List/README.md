@@ -3,4 +3,4 @@
 Linked list is a linear collection of data elements, whose order is not given by their physical placement in memory. Instead, each element points to the next.
 They can be used to implement several other common abstract data types - stacks, queues.
 
-<img src="Singly-linked-list.svg">
+<img src="LinkedList.png">
