@@ -28,17 +28,6 @@ struct singleLinkedList *deleteFromList(int val, struct singleLinkedList *List){
     return List;
 }
 
-/* Function for sorting. */
-int sort(int val, struct singleLinkedList *previousNode, struct singleLinkedList *currentNode){
-    if(val < previousNode->val){
-        return 0;
-    }
-    else if((currentNode != NULL) && val < currentNode->val){
-        return 0;
-    }
-    return 1;
-
-}
 
 /* Function for adding nodes in list. */
 struct singleLinkedList *addToList(int val, struct singleLinkedList *List, int sorting){
