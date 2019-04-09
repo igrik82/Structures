@@ -7,9 +7,9 @@ struct singlyLinkedList *deleteFromList(int val, struct singlyLinkedList *List){
     if(List == NULL){
         puts("The list is empty.");
     } else {
-        struct singlyLinkedList *previousNode = (struct singlyLinkedList*)malloc(sizeof(struct singlyLinkedList));
-        struct singlyLinkedList *currentNode = (struct singlyLinkedList*)malloc(sizeof(struct singlyLinkedList));
-        struct singlyLinkedList *temp = (struct singlyLinkedList*)malloc(sizeof(struct singlyLinkedList));
+        struct singlyLinkedList *previousNode = NULL;
+        struct singlyLinkedList *currentNode = NULL;
+        struct singlyLinkedList *temp = NULL;
 
         previousNode = List;
         currentNode = List->next;
@@ -40,8 +40,8 @@ struct singlyLinkedList *addToList(int val, struct singlyLinkedList *List, int s
 
     } else {
 
-        struct singlyLinkedList *previousNode = (struct singlyLinkedList*)malloc(sizeof(struct singlyLinkedList));
-        struct singlyLinkedList *currentNode = (struct singlyLinkedList*)malloc(sizeof(struct singlyLinkedList));
+        struct singlyLinkedList *previousNode = NULL;
+        struct singlyLinkedList *currentNode = NULL;
         struct singlyLinkedList *newNode = (struct singlyLinkedList*)malloc(sizeof(struct singlyLinkedList));
 
         previousNode = List;
