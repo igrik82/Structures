@@ -3,4 +3,4 @@ project(SinglyLinkedList C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(singlyLinkedList.h singlyLinkedList.c Example.c)
+add_executable(singlyLinkedList singlyLinkedList.h singlyLinkedList.c Example.c)
