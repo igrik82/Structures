@@ -1,13 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <errno.h>
 #include "stack.h"
 
 //Print list
-void printList(struct stack *List){
-    if(List == NULL){
+void printList(struct stack *List)
+{
+    if(List == NULL)
+    {
         puts("The list is empty.");
-    } else {
-        while(List) {
+    }
+    else
+    {
+        while(List)
+        {
             printf("%d -> ", List->data);
             List = List->next;
         }
@@ -16,15 +22,16 @@ void printList(struct stack *List){
 }
 
 //Push data to stack
-struct stack *pushToStack(int data, struct stack *List){
-    if(List == NULL){
-
+struct stack *pushToStack(int data, struct stack *List)
+{
+    if(List == NULL)
+    {
         List = (struct stack*)malloc(sizeof(struct stack));
         List->data = data;
         List->next = NULL;
-
-    } else {
-
+    }
+    else
+    {
         struct stack *currentNode = NULL;
         struct stack *nextNode = NULL;
         struct stack *newNode = (struct stack*)malloc(sizeof(struct stack));
@@ -34,7 +41,8 @@ struct stack *pushToStack(int data, struct stack *List){
         currentNode = List;
         nextNode = List->next;
 
-        while(nextNode){
+        while(nextNode)
+        {
             currentNode = nextNode;
             nextNode = nextNode->next;
         }
@@ -43,26 +51,38 @@ struct stack *pushToStack(int data, struct stack *List){
     return List;
 }
 
-struct stack *popFromStack(struct stack *List){
-    if(List == NULL){
-        puts("The list is empty.");
-    } else {
+int popFromStack(struct stack **List)
+{
+    int data;
+    if(*List == NULL)
+    {
+        fprintf(stderr, "The stack is empty. Pop function forbidden.");
+        exit(EXIT_FAILURE);
+    }
+    else
+    {
+
         struct stack *tempNode = NULL;
-        tempNode = List;
-        List = List->next;
+        tempNode = *List;
+        data = (*List)->data;
+
+        *List = (*List)->next;
         free(tempNode);
         tempNode = NULL;
-
     }
-    return List;
+    return data;
 }
 
-void freeMemory(struct stack *List){
-
-    if(List == NULL){
+void freeMemory(struct stack *List)
+{
+    if(List == NULL)
+    {
         return;
-    } else {
-        while (List){
+    }
+    else
+    {
+        while (List)
+        {
             struct stack *tempNode = NULL;
             tempNode = List;
             List = List->next;
