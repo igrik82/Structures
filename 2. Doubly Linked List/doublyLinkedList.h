@@ -7,6 +7,9 @@ struct doublyLinkedList{
     struct doublyLinkedList *next; // pointed to next node
 };
 
+//Freeing memory from the list
+void freeMemory(struct doublyLinkedList *List);
+
 //Printing, in order from places first node
 void printList(struct doublyLinkedList *List);
 

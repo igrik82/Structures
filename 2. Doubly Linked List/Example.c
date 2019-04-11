@@ -27,7 +27,7 @@ int main() {
     puts("");
 
     puts("\n");
-    free(List);
+    freeMemory(List);
     List = NULL;
 
 
@@ -51,7 +51,7 @@ int main() {
     printList(List);
     puts("");
 
-    free(List);
+    freeMemory(List);
     List = NULL;
 
 }

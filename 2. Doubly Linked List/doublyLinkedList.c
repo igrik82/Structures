@@ -2,6 +2,27 @@
 #include <stdlib.h>
 #include "doublyLinkedList.h"
 
+//Freeing memory from the list
+void freeMemory(struct doublyLinkedList *List){
+
+    if(List->prev == NULL){
+        while(List){
+            struct doublyLinkedList *tempNode = NULL;
+            tempNode = List;
+            List = List->next;
+            free(tempNode);
+        }
+    } else {
+        while(List){
+            struct doublyLinkedList *tempNode = NULL;
+            tempNode = List;
+            List = List->prev;
+            free(tempNode);
+        }
+    }
+
+}
+
 //Delete character
 struct doublyLinkedList *deleteCharacter(char character, struct doublyLinkedList *List){
     if(List == NULL){
