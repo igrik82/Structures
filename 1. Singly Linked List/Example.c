@@ -6,7 +6,7 @@ int main() {
 
     struct singlyLinkedList *Node = NULL;
 
-    int values[] = { 5, 10, 4, 8, 3, 16, 6, 7, 12, 6 };
+    int values[] = { 5, 10, 4, 34, 5, 37, 33 ,7 , 24 };
     int sizeArray = sizeof(values) / sizeof(int);
 
     //add variables to list without sorting (0)
@@ -17,10 +17,10 @@ int main() {
 
     //delete from list
     Node = deleteFromList(4, Node);
-    Node = deleteFromList(16, Node);
+    Node = deleteFromList(7, Node);
     printList(Node);
 
-    free(Node);
+    freeMemory(Node);
     Node = NULL;
 
 
@@ -33,10 +33,10 @@ int main() {
 
     //delete from list
     Node = deleteFromList(5, Node);
-    Node = deleteFromList(6, Node);
+    Node = deleteFromList(37, Node);
     printList(Node);
 
-    free(Node);
+    freeMemory(Node);
     Node = NULL;
 
 }

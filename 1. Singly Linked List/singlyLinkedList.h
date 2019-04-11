@@ -6,6 +6,8 @@ struct singlyLinkedList{
     struct singlyLinkedList *next;
 };
 
+//Freeing memory from the list
+void freeMemory(struct singlyLinkedList *List);
 void printList(struct singlyLinkedList *List);
 struct singlyLinkedList *addToList(int val, struct singlyLinkedList *List, int sorting);
 struct singlyLinkedList *deleteFromList(int val, struct singlyLinkedList *List);
